@@ -1,0 +1,13 @@
+version: '3.0'
+services:
+  git-inspired-backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: git-inspired-backend
+    image: git-inspired-backend
+    restart: on-failure
+    ports:
+      - '3002:5000'
+    env_file:
+      - /home/projects/gitinspired-rw-oct/.env
